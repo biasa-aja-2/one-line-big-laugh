@@ -28,6 +28,11 @@ Why this line, against the judge's brief (most important first):
 
 Pure standard library only. No network, no randomness, no arguments:
 the output is fixed and deterministic.
+
+Gate self-check (mirrors the sealed scorer): the text must be UTF-8,
+1 to 200 characters, not only white space, and a single line. The
+program refuses to write anything if a gate fails, and it verifies
+by reading the file back before it exits.
 """
 
 import os
